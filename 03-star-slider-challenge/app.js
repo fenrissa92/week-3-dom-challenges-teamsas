@@ -16,6 +16,25 @@ Expected Outcomes:
 
 function createStars(number) {
   let targetDiv = document.getElementById("stars");
+
+  targetDiv.innerHTML = "";
+
+  for (let i = 0; i < number; i++) {
+    let newStar = document.createElement("span");
+    newStar.classList.add("star-icon");
+    newStar.textContent = "★";
+    targetDiv.appendChild(newStar);
+  }
+}
+
+addEventListener("change", (e) => {
+  let slider = e.target.value;
+  createStars(slider);
+});
+
+
+
+/*
   let newStar = document.createElement("span");
 
   newStar.classList.add("star-icon");
@@ -35,3 +54,4 @@ let slider = e.target.value;
 let numStars = document.querySelectorAll(".star-icon");
 
 })
+*/
