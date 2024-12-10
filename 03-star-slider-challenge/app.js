@@ -13,3 +13,25 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+function createStars(number) {
+  let targetDiv = document.getElementById("stars");
+  let newStar = document.createElement("span");
+
+  newStar.classList.add("star-icon");
+  newStar.textContent = "★";
+
+  targetDiv.appendChild(newStar);
+}
+
+function removeStar() {
+  let removedStar = document.querySelector("star-icon");
+  removedStar.remove();
+}
+
+addEventListener("change", (e) => {
+let slider = e.target.value;
+
+let numStars = document.querySelectorAll(".star-icon");
+
+})
