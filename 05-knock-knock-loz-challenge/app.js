@@ -13,3 +13,42 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+/*
+let door1 = document.querySelector(".door");
+let door2 = document.querySelector(".door":nth-Child(2));
+
+door.addEventListener("click", reveal);
+
+
+function reveal() {
+  let randomNumber = Math.random();
+  if (randomNumber < 0.5) {
+    console.log("Empty room!");
+  } else {
+    console.log("Loz!");
+  }
+}
+*/
+
+//let door = document.querySelectorAll(".door");
+
+let door1 = document.querySelector(".door:first-child");
+let door2 = document.querySelector(".door:nth-child(2)");
+
+door1.addEventListener("click", reveal);
+door2.addEventListener("click", reveal);
+
+
+function reveal() {
+  let randomNumber = Math.random();
+  if (randomNumber < 0.5) {
+    door1.src="door-open-empty.png";
+    door2.src="door-open-loz.png";
+    console.log("Nothing's here!");
+  } else {
+    door1.src="door-open-loz.png";
+    door2.src="door-open-empty.png";
+    console.log("Loz is here!");
+  }
+}
+
